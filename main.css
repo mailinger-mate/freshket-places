@@ -1,0 +1,64 @@
+body {
+  background-color: Canvas;
+  color: CanvasText;
+  color-scheme: light dark;
+  font-family: system-ui;
+  margin: 1rem;
+}
+
+place-list {
+  &::part(list) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    list-style: none;
+    padding: 0;
+    gap: 1em;
+  }
+  &::part(item) {
+    background-color: Canvas;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 .5rem 1rem ButtonFace;
+    border: 1px solid ButtonBorder;
+    text-align: center;
+  }
+  &::part(image) {
+    width: 100%;
+    border-radius: 1rem;
+    aspect-ratio: 1;
+  }
+  &::part(title) {
+    background-color: CanvasText;
+    position: relative;
+    margin: -1em 1rem 1rem;
+    padding: .5em 1em;
+    font-size: 1.2rem;
+    color: Canvas;
+  }
+  &::part(tags) {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    font-size: smaller;
+  }
+  &::part(tag) {
+    background-color: AccentColor;
+    color: AccentColorText;
+    padding: .5em;
+    border-radius: .5rem;
+  }
+  &::part(Earth) {
+    background-color: darkolivegreen;
+  }
+  &::part(Air) {
+    background-color: steelblue;
+  }
+  &::part(Fire) {
+    background-color: firebrick;
+  }
+  &::part(Water) {
+    background-color: cadetblue;
+  }
+}
